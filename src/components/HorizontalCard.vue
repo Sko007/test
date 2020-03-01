@@ -1,5 +1,4 @@
 <template>
-  <v-app id="inspire">
     <v-card class="mx-auto">
       <v-container>
         <v-row dense>
@@ -14,7 +13,7 @@
                   ></v-img>
                 </v-col>
                 <v-col cols="8">
-                  <v-card-title class="headline">Name of the Hotel</v-card-title>
+                  <v-card-title class="headline">{{data.name}}</v-card-title>
 
                   <v-card-subtitle>Description:Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</v-card-subtitle>
 
@@ -30,14 +29,17 @@
         </v-row>
       </v-container>
     </v-card>
-  </v-app>
 </template>
 
 
 <script>
+
 export default {
+  props: ['data'],
   name: "HorizontalCard"
 };
+
+
 </script>
 
 <style lang="scss" scoped>

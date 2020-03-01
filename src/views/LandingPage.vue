@@ -1,7 +1,13 @@
 <template>
-  <div>
-    <HorizontalCard />
-  </div>
+  <v-app id="inspire">
+  
+    <HorizontalCard 
+    v-for="(hotel, index) in hotels" 
+    :key="index" 
+    :data="hotel" 
+    />
+  </v-app>
+  
 </template>
 
 <script>
@@ -15,12 +21,8 @@ export default {
 
   computed: {
     ...mapGetters({
-      Hotels: "getHotels"
+      hotels: "getHotels"
     })
-    // getHotels() {
-    //   console.log("inside Landingpage", this.$store.getters.getHotels )
-    //   return this.$store.getters.getHotels;
-    // }
   },
 
   methods: {
