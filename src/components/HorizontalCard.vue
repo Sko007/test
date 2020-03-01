@@ -32,6 +32,8 @@
     </v-card>
   </v-app>
 </template>
+
+
 <script>
 export default {
   name: "HorizontalCard"
@@ -41,6 +43,5 @@ export default {
 <style lang="scss" scoped>
 .padding{
   padding:0px
-
 }
 </style>

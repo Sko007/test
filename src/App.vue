@@ -24,7 +24,7 @@
     <v-content>
       <Hotels />
 
-            <HorizonalCard />
+            <LandingPage />
         
       
     </v-content>
@@ -33,14 +33,14 @@
 
 <script>
 import Hotels from "./components/Hotels";
-import HorizonalCard from "./components/HorizontalCard";
+import LandingPage from "./views/LandingPage"
 
 export default {
   name: "App",
 
   components: {
     Hotels,
-    HorizonalCard
+    LandingPage
   },
 
   data: () => ({
