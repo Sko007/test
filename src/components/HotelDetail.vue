@@ -1,5 +1,7 @@
 <template>
-    <v-card class="mx-auto">
+  <v-app id="inspire">
+
+        <v-card class="mx-auto">
       <v-container>
         <v-row dense>
           <v-col cols="12">
@@ -13,37 +15,27 @@
                   ></v-img>
                 </v-col>
                 <v-col cols="8">
-                 <router-link :to="`/hotel/${data.id}`"> <v-card-title class="headline">{{data.name}}</v-card-title></router-link>
-
-                  <v-card-subtitle>Description:Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</v-card-subtitle>
-
-                  <v-card-subtitle>Rating:Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</v-card-subtitle>
-
-                  <v-card-actions>
-                    <v-btn text>Details</v-btn>
-                  </v-card-actions>
+                    <h1>Was ist das hier</h1>
                 </v-col>
               </v-row>
+                <RoomTable></RoomTable>
             </v-card>
           </v-col>
         </v-row>
       </v-container>
     </v-card>
+  </v-app>
+
 </template>
 
 
+
 <script>
+import RoomTable from "./RoomTable"
 
 export default {
-  props: ['data'],
-  name: "HorizontalCard"
-};
-
-
-</script>
-
-<style lang="scss" scoped>
-.padding{
-  padding:0px
+     components: {
+    RoomTable
+  },
 }
-</style>
+</script>

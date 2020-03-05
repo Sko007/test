@@ -6,6 +6,7 @@
     :key="index" 
     :data="hotel" 
     />
+
   </v-app>
   
 </template>

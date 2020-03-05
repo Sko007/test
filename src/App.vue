@@ -22,25 +22,23 @@
     </v-app-bar>
 
     <v-content>
-      <Hotels />
 
-            <LandingPage />
-        
-      
+            <!-- <LandingPage /> -->
+
+        <router-view></router-view>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import Hotels from "./components/Hotels";
-import LandingPage from "./views/LandingPage"
+// import Hotels from "./components/Hotels";
+// import LandingPage from "./views/LandingPage"
 
 export default {
   name: "App",
 
   components: {
-    Hotels,
-    LandingPage
+    // LandingPage
   },
 
   data: () => ({
