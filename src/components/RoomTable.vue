@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <v-app id="inspire"> -->
-    <v-simple-table fixed-header height="500px">
+    <v-simple-table fixed-header height="500px" >
       <template v-slot:default>
         <thead>
           <tr>
