@@ -3,14 +3,15 @@ const state = {
   };
   
   const mutations = {
-    HOTELS(state, rooms) {
+    ROOMS(state, rooms) {
   
-      state.hotels = hotels;
+      state.rooms = rooms;
     }
   };
   
   const getters = {
-    getHotels: state => {
+    getRooms: state => {
+        console.log("state.rooms", state.rooms)
       return state.rooms;
     }
   };

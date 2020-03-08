@@ -15,7 +15,14 @@
                   ></v-img>
                 </v-col>
                 <v-col cols="8">
-                    <h1>Was ist das hier</h1>
+                    <h1>{{hotel.name}}</h1>
+                    <p>{{hotel.description}}</p>
+                    <p>distance to venue: {{hotel.distance_to_venue}}</p>
+                    <p>price category: {{hotel.price_category}}</p>
+                    <p>Rating: {{hotel.rating}}</p>
+
+
+
                 </v-col>
               </v-row>
                 <RoomTable></RoomTable>
@@ -32,10 +39,31 @@
 
 <script>
 import RoomTable from "./RoomTable"
+import { mapActions } from "vuex";
+import { mapGetters } from "vuex";
+
+
 
 export default {
      components: {
     RoomTable
   },
+    computed: {
+    ...mapGetters({
+      hotel: "getHotel",
+      rooms: "getRooms"
+    })
+  },
+
+  methods: {
+    ...mapActions(["loadHotel","loadRooms"])
+  },
+
+  created() {
+    console.log("created is executed");
+
+    this.loadHotel();
+    this.loadRooms()
+  }
 }
 </script>
